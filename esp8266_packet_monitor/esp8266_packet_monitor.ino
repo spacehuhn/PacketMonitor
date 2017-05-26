@@ -19,7 +19,7 @@ SSD1306 display(0x3c, D1, D2);
 //===== SETTINGS =====//
 #define maxCh 13 //max Channel -> US = 11, EU = 13, Japan = 14
 #define ledPin 2 //led pin ( 2 = built-in LED)
-#define packetRate 3 //min. packets before it gets recognized as an attack
+#define packetRate 5 //min. packets before it gets recognized as an attack
 
 #define flipDisplay true
 

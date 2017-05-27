@@ -73,7 +73,7 @@ void getMultiplicator(){
   for(int i=0;i<128;i++){
     if(val[i] > maxVal) maxVal = val[i];
   }
-  if(maxVal > 54) multiplicator = (double)54/(double)maxVal;
+  if(maxVal > 53) multiplicator = (double)53/(double)maxVal;
   else multiplicator = 1;
 }
 
@@ -81,25 +81,24 @@ void loop() {
   curTime = millis();
   
   if(digitalRead(btn) == LOW){
-    if(canBtnPress){
-      curChannel++;
-      if(curChannel > maxCh) curChannel = 1;
-      wifi_set_channel(curChannel);
-      for(int i=0;i<128;i++) val[i] = 0;
-      pkts = 0;
-      multiplicator = 1;
-      canBtnPress = false;
-
-      EEPROM.write(2000, curChannel);
-      EEPROM.commit();
-
-      display.clear();
-      for(int i=0;i<128;i++) display.drawLine(i, 64, i, 64-val[i]*multiplicator);
-      display.drawString(0, 0, " Ch: " + (String)curChannel + " Pkts: "+(String)pkts);
-      display.display();
-    }
+    if(canBtnPress) canBtnPress = false;
   }else if(!canBtnPress){
     canBtnPress = true;
+    
+    curChannel++;
+    if(curChannel > maxCh) curChannel = 1;
+    wifi_set_channel(curChannel);
+    for(int i=0;i<128;i++) val[i] = 0;
+    pkts = 0;
+    multiplicator = 1;
+     
+    EEPROM.write(2000, curChannel);
+    EEPROM.commit();
+
+    display.clear();
+    for(int i=0;i<128;i++) display.drawLine(i, 64, i, 64-val[i]*multiplicator);
+    display.drawString(0, 0, " Ch: " + (String)curChannel + " Pkts: "+(String)pkts);
+    display.display();
   }
 
   if(curTime - prevTime >= 1000){

@@ -13,8 +13,8 @@ extern "C" {
 #define btn 0
 
 //create display(Adr, SDA-pin, SCL-pin)
-SSD1306 display(0x3c, D1, D2);
-//SH1106 display(0x3c, D2, D1);
+SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
+//SH1106 display(0x3c, 5, 4);
   
 //===== SETTINGS =====//
 #define maxCh 13 //max Channel -> US = 11, EU = 13, Japan = 14

@@ -67,7 +67,8 @@ Then connect the button between GND and the button PIN from the code.
 
 ### Uploading the .bin file
 
-Upload the `deauth_detector.bin` using the [esptool-gui](https://github.com/Rodmg/esptool-gui), [nodemcu-flasher](https://github.com/nodemcu/nodemcu-flasher) **or** the [esptool](https://github.com/espressif/esptool) from Espressif.
+Go to [releases](https://github.com/spacehuhn/PacketMonitor/releases) and download the latest .bin file.  
+Upload the `PacketMonitor.bin` using the [esptool-gui](https://github.com/Rodmg/esptool-gui), [nodemcu-flasher](https://github.com/nodemcu/nodemcu-flasher) **or** the [esptool](https://github.com/espressif/esptool) from Espressif.
 
 ### Using Arduino
 

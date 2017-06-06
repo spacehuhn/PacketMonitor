@@ -1,5 +1,5 @@
 # PacketMonitor
-ESP8266 + OLED = WiFi Packet Monitor 📦📺
+ESP8266 + OLED = WiFi Packet Monitor 
 
 ![]()
 
@@ -8,8 +8,16 @@ ESP8266 + OLED = WiFi Packet Monitor 📦📺
 
 ## Introduction
 
-Did you ever asked yourself how many internet traffic is on the air around you?  
-This little project is great to see how many packets are just flying around on which channel!
+This little project is great to see how many packets are just flying around you!  
+
+![]()
+
+It's not limited to one network, it scans all traffic on one channel.  
+
+![]()
+
+You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on that channel! (For more info please see my [DeauthDetector project](https://github.com/spacehuhn/DeauthDetector).)
+
 
 ## Building it
 
@@ -20,12 +28,12 @@ This little project is great to see how many packets are just flying around on w
 - wires to connect everything
 
 You can also buy a ready to use board wich comes with the code preflashed and ready to use!  
-- [AliExpress]()
-- [tindie]()
-(By purchasing you support me and my projects!)
+- [AliExpress](https://goo.gl/AGTxQ8)  
+- [tindie](https://goo.gl/Q3n2c9)  
+(By your purchase you also support me and my projects!)  
 
 
-**Connecting the Display:**
+**Connecting the Display:**  
 
 | Display | ESP8266 |
 | ------- | ------- |
@@ -41,9 +49,9 @@ SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 //SH1106 display(0x3c, 5, 4);
 ```
 
-For the button you can either use the flash button or connect your own.  
+**Connecting the button:**  
+If you have a NodeMCU or any other development board you can use its flash button and don't have to connect a button yourself!  
 
-**Connecting the button:**
 Modify the button pin in the code to whatever pin you like to use:
 ```
 #define btn 0 /* GPIO 0 = FLASH BUTTON */
@@ -51,12 +59,11 @@ Modify the button pin in the code to whatever pin you like to use:
 Then connect the button between GND and the button PIN from the code.
 
 
-**That's all :)**
-
+**That's all :)**  
 
 ## How to install it  
 
-**You will only need to follow one of the installation methods!**
+**You will only need to follow one of the installation methods!**  
 
 ### Uploading the .bin file
 
@@ -87,7 +94,19 @@ SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 
 #define flipDisplay true
 ```
-**5** Upload the code to your ESP8266 (don't forget to set it to the right upload settings!)
-**6** Disconnect and reconnect your ESP8266 to restart it properly.
+**5** Upload the code to your ESP8266 (don't forget to set it to the right upload settings!)  
+**6** Disconnect and reconnect your ESP8266 to restart it properly.  
 
 **DONE :)**
+
+## Using it
+
+Plug it in and see the WiFi traffic around you!  
+
+You can change the channel by clicking on the button, it will remember your channel selection even when you unplug it.  
+
+If the LED lights up, that means that it recognized a lot of deauthentication or disassociation frames on that channel which could indicate a deauthentication attack. More on that on my other project [esp8266_deauther](https://github.com/spacehuhn/esp8266_deauther).
+
+## License
+
+This project is licensed under the MIT License - see the [license file](LICENSE) for details.

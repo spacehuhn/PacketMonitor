@@ -74,8 +74,8 @@ Upload the `deauth_detector.bin` using the [esptool-gui](https://github.com/Rodm
 **1** Install [Arduino](https://www.arduino.cc/en/Main/Software)  
 **2** Install the [ESP8266 SDK](https://github.com/esp8266/Arduino)  
 **2** Install the [esp8266-oled-ssd1306](https://github.com/squix78/esp8266-oled-ssd1306) library  
-**3** Download this project and open it with Arduino
-**4** Maybe customize the code:
+**3** Download this project and open it with Arduino  
+**4** Maybe customize the code:  
 ```
 //===== SETTINGS =====//
 //include the library you need

@@ -8,7 +8,7 @@ ESP8266 + OLED = WiFi Packet Monitor
 
 ## Introduction
 
-This little project is great to see how many packets are just flying around you!  
+Did you ever wonder how many data packets are just flying around you?! Well with this little project you can see how many Wi-Fi packets are in the air every second and on which channel.
 
 ![]()
 
@@ -16,7 +16,7 @@ It's not limited to one network, it scans all traffic on one channel.
 
 ![]()
 
-You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on that channel! (For more info please see my [DeauthDetector project](https://github.com/spacehuhn/DeauthDetector).)
+You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on the selected channel! (For more info please see my [DeauthDetector project](https://github.com/spacehuhn/DeauthDetector).)
 
 
 ## Building it
@@ -24,7 +24,7 @@ You can see peaks whenever a device starts surfing the web and it will also warn
 **The shopping list:**  
 - an ESP8266 (doesn't matter which module or board)
 - SSD1306 or SH1106 I2C OLED Display 128x64 pixel
-- [Optional] a button (if you use a dev. board with a flash button on it you can use that instead)
+- [Optional] a button (if you use a dev. board with a flash button on it, you can use that instead)
 - wires to connect everything
 
 You can also buy a ready to use board wich comes with the code preflashed and ready to use!  

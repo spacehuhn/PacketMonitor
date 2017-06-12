@@ -1,24 +1,34 @@
 # PacketMonitor
 ESP8266 + OLED = WiFi Packet Monitor 
 
-![]()
+![PacketMonitor running on D-Duino board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/dduino_2.jpg)
 
 [**Support me and my projects on Patreon!**  
 <img width="450" alt="Support me on Patreon" src="https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/patreon.png">](https://www.patreon.com/spacehuhn)  
 
 
-
 ## Introduction
 
-Did you ever wonder how many data packets are just flying around you?! Well with this little project you can see how many Wi-Fi packets are in the air every second and on which channel.
-
-![]()
+Did you ever wonder how many data packets are flying around you right now?! This little project tells you how many Wi-Fi packets are sent every second and on which channel.  
 
 It's not limited to one network, it scans all traffic on one channel.  
 
-![]()
+![PacketMonitor running on a Wemos D1 Mini + SSD1302 OLED](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/custom_build.jpg)
 
 You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on the selected channel! (For more info please see my [DeauthDetector project](https://github.com/spacehuhn/DeauthDetector).)
+
+[![WiFi Packet-Monitor ESP8266](https://img.youtube.com/vi/RGkqemAGbjU/0.jpg)](https://youtu.be/RGkqemAGbjU)
+
+## Preflashed Boards
+
+The D-Duino boards by DSTIKE are a great choice for this project.  
+This version here will come preflashed with this project:
+- [tindie]()  
+- [AliExpress]()  
+
+[D-Duino board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/dduino_1.jpg)
+
+Plese be aware that there are fake D-Duino boards out there, labeled with "Wemos". They are not made by Wemos, these boards are just cheap fakes - they can work, but I would recomment to step away from them.  
 
 
 ## Building it
@@ -56,7 +66,7 @@ If you have a NodeMCU or any other development board you can use its flash butto
 
 Modify the button pin in the code to whatever pin you like to use:
 ```
-#define btn 0 /* GPIO 0 = FLASH BUTTON */
+#define btn 0 //GPIO 0 = FLASH BUTTON
 ```
 Then connect the button between GND and the button PIN from the code.
 
@@ -81,15 +91,11 @@ Upload the `PacketMonitor.bin` using the [esptool-gui](https://github.com/Rodmg/
 **4** Maybe customize the code:  
 ```
 //===== SETTINGS =====//
-//include the library you need
-#include "SSD1306.h"
-//#include "SH1106.h"
-
-#define btn 0 /* GPIO 0 = FLASH BUTTON */
-
 //create display(Adr, SDA-pin, SCL-pin)
 SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 //SH1106 display(0x3c, 5, 4);
+
+#define btn 0 //GPIO 0 = FLASH BUTTON
   
 #define maxCh 13 //max Channel -> US = 11, EU = 13, Japan = 14
 #define ledPin 2 //led pin ( 2 = built-in LED)

@@ -2,15 +2,14 @@
 #include <Wire.h>
 #include <EEPROM.h>
 
+#include "SSD1306.h"
+#include "SH1106.h"
+
 extern "C" {
   #include "user_interface.h"
 }
 
 //===== SETTINGS =====//
-//include the library you need
-#include "SSD1306.h"
-#include "SH1106.h"
-
 //create display(Adr, SDA-pin, SCL-pin)
 SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 //SH1106 display(0x3c, 5, 4);

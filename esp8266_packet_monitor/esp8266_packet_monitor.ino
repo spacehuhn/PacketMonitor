@@ -9,13 +9,13 @@ extern "C" {
 //===== SETTINGS =====//
 //include the library you need
 #include "SSD1306.h"
-//#include "SH1106.h"
-
-#define btn 0 /* GPIO 0 = FLASH BUTTON */
+#include "SH1106.h"
 
 //create display(Adr, SDA-pin, SCL-pin)
 SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 //SH1106 display(0x3c, 5, 4);
+
+#define btn 0 //GPIO 0 = FLASH BUTTON
   
 #define maxCh 13 //max Channel -> US = 11, EU = 13, Japan = 14
 #define ledPin 2 //led pin ( 2 = built-in LED)

@@ -3,8 +3,8 @@ ESP8266 + OLED = WiFi Packet Monitor
 
 ![PacketMonitor running on D-Duino board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/dduino_2.jpg)
 
-[**Support me and my projects on Patreon!**  
-<img width="200" alt="Support me on Patreon" src="https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/patreon.png">](https://www.patreon.com/spacehuhn)  
+**Support me and my projects on [Patreon!](https://www.patreon.com/spacehuhn)**  
+[<img width="200" alt="Support me on Patreon" src="https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/patreon.png">](https://www.patreon.com/spacehuhn)  
 
 
 ## Introduction

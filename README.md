@@ -23,27 +23,23 @@ You can see peaks whenever a device starts surfing the web and it will also warn
 
 The D-Duino boards by DSTIKE are a great choice for this project.  
 This version here will come preflashed with this project:
-- [tindie]()  
-- [AliExpress]()  
+- [tindie](https://goo.gl/ngcmXH)  
+- [AliExpress](https://goo.gl/HVu8lU)  
+
+(By your purchase you also support me and my projects!)  
 
 [D-Duino board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/dduino_1.jpg)
 
-Plese be aware that there are fake D-Duino boards out there, labeled with "Wemos". They are not made by Wemos, these boards are just cheap fakes - they can work, but I would recomment to step away from them.  
+Plese be aware that there are fake D-Duino boards out there, labeled with "Wemos" instead of DSTIKE. They are not made by Wemos, these boards are just cheap fakes - they can work, but I would recomment to step away from them.  
 
 
-## Building it
+## Building it yourself
 
 **The shopping list:**  
 - an ESP8266 (doesn't matter which module or board)
 - SSD1306 or SH1106 I2C OLED Display 128x64 pixel
 - [Optional] a button (if you use a dev. board with a flash button on it, you can use that instead)
 - wires to connect everything
-
-You can also buy a ready to use board wich comes with the code preflashed and ready to use!  
-- [AliExpress](https://goo.gl/AGTxQ8)  
-- [tindie](https://goo.gl/Q3n2c9)  
-(By your purchase you also support me and my projects!)  
-
 
 **Connecting the Display:**  
 

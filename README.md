@@ -15,7 +15,7 @@ It's not limited to one network, it scans all traffic on one channel.
 
 ![PacketMonitor running on a Wemos D1 Mini + SSD1302 OLED](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/custom_build.jpg)
 
-You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on the selected channel! (For more info please see my [DeauthDetector project](https://github.com/spacehuhn/DeauthDetector).)
+You can see peaks whenever a device starts surfing the web and it will also warn you when a deauthentication attack is going on the selected channel! (For more info please see my [DeauthDetector](https://github.com/spacehuhn/DeauthDetector) project.)
 
 [![WiFi Packet-Monitor ESP8266](https://img.youtube.com/vi/RGkqemAGbjU/0.jpg)](https://youtu.be/RGkqemAGbjU)
 

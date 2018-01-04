@@ -104,6 +104,24 @@ SSD1306 display(0x3c, 5, 4); //GPIO 5 = D1, GPIO 4 = D2
 
 **DONE :)**
 
+### Using Arduino (No display)
+
+**1** Install [Arduino](https://www.arduino.cc/en/Main/Software)  
+**2** Install the [ESP8266 SDK](https://github.com/esp8266/Arduino)  
+**3** Download this project and open it with Arduino  
+**4** Maybe customize the code:  
+```
+#define btn 0 //GPIO 0 = FLASH BUTTON
+  
+#define maxCh 13 //max Channel -> US = 11, EU = 13, Japan = 14
+#define ledPin 2 //led pin ( 2 = built-in LED)
+#define packetRate 5 //min. packets before it gets recognized as an attack
+```
+**5** Upload the code to your ESP8266 (don't forget to set it to the right upload settings!)  
+**6** Disconnect and reconnect your ESP8266 to restart it properly.  
+
+**DONE :)**
+
 ## Using it
 
 Plug it in and see the WiFi traffic around you!  

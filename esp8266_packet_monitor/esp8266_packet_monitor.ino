@@ -88,7 +88,7 @@ void setup() {
   display.drawString(0, 0, "Packet-");
   display.drawString(0, 16, "Monitor");
   display.setFont(ArialMT_Plain_10);
-  display.drawString(0, 40, "Copyright (c) 2017");
+  display.drawString(0, 40, "Copyright (c) 2018");
   display.drawString(0, 50, "Stefan Kremser");
   display.display();
   delay(2500);
@@ -178,6 +178,9 @@ void loop() {
     if (deauths > packetRate) digitalWrite(ledPin, LOW);
     else digitalWrite(ledPin, HIGH);
 
+    if (pkts == 0) pkts = deauths;
+    no_deauths = pkts - deauths;
+
     //draw display
     display.clear();
     display.drawLine(minRow, Line, maxRow, Line);
@@ -195,7 +198,6 @@ void loop() {
     //reset counters
     deauths    = 0;
     pkts       = 0;
-    no_deauths = 0;
   }
 
 }

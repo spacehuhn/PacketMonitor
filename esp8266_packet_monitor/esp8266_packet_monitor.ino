@@ -18,10 +18,11 @@ extern "C" {
 
 /*===== SETTINGS =====*/
 /* create display(Adr, SDA-pin, SCL-pin) */
-SSD1306 display(0x3c, 5, 4); // GPIO 5 = D1, GPIO 4 = D2
+SSD1306 display(0x3c, 5, 4);   // GPIO 5 = D1, GPIO 4 = D2
 //SH1106 display(0x3c, 5, 4);
 
-#define btn D5         // GPIO 14 = SELECT BUTTON
+/* select the button for your board */
+#define btn D3         // GPIO 0 = FLASH BUTTON 
 
 #define maxCh 13       // max Channel -> US = 11, EU = 13, Japan = 14
 #define ledPin 2       // led pin ( 2 = built-in LED)
@@ -58,7 +59,7 @@ unsigned long maxVal     = 0;
 double multiplicator     = 0.0;
 bool canBtnPress         = true;
 
-int val[128];
+unsigned int val[128];
 
 void sniffer(uint8_t *buf, uint16_t len) {
   pkts++;
@@ -124,8 +125,6 @@ void loop() {
   curTime = millis();
 
   //on button release
-  pinMode(btn, OUTPUT);
-  digitalWrite(btn,  HIGH);
   if (digitalRead(btn) == LOW) {
     if (canBtnPress) canBtnPress = false;
   } else if (!canBtnPress) {

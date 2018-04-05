@@ -9,7 +9,7 @@ ESP8266 + OLED = WiFi Packet Monitor
 
 ## Introduction
 
-Did you ever wonder how many data packets are flying around you right now?! This little project tells you how many Wi-Fi packets are sent every second and on which channel.  
+Did you ever wonder how many data packets are flying around you right now?! This little project tells you how many normal Wi-Fi and Deauth packets are sent every second and on which channel.  
 
 It's not limited to one network, it scans all traffic on one channel.  
 

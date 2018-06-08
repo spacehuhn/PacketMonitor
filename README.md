@@ -30,7 +30,7 @@ This version here will come preflashed with this project:
 
 [D-Duino board](https://raw.githubusercontent.com/spacehuhn/PacketMonitor/master/images/dduino_1.jpg)
 
-Plese be aware that there are fake D-Duino boards out there, labeled with "Wemos" instead of DSTIKE. They are not made by Wemos, these boards are just cheap fakes - they can work, but I would recomment to step away from them.  
+Please be aware that there are fake D-Duino boards out there, labeled with "Wemos" instead of DSTIKE. They are not made by Wemos, these boards are just cheap fakes - they can work, but I would recommend to step away from them.  
 
 
 ## Building it yourself
